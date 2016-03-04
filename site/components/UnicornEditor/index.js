@@ -4,28 +4,33 @@ import hashtagPlugin from 'draft-js-hashtag-plugin';
 import stickerPlugin from 'draft-js-sticker-plugin';
 import linkifyPlugin from 'draft-js-linkify-plugin';
 import mentionPlugin from 'draft-js-mention-plugin';
+import testPlugin from 'draft-js-test-plugin';
 import { EditorState } from 'draft-js';
 import styles from './styles';
 import stickers from './stickers';
 import StatePreview from '../StatePreview';
 
-const hashtagPluginInstance = hashtagPlugin();
-const linkifyPluginInstance = linkifyPlugin();
+// const hashtagPluginInstance = hashtagPlugin();
+const testPluginInstance = testPlugin();
+// const linkifyPluginInstance = linkifyPlugin();
 const stickerPluginInstance = stickerPlugin({ stickers });
 const { StickerSelect } = stickerPluginInstance;
 
+console.log(testPluginInstance);
+
 const plugins = [
-  hashtagPluginInstance,
+  // hashtagPluginInstance,
   stickerPluginInstance,
-  linkifyPluginInstance,
+  // linkifyPluginInstance,
+  testPluginInstance,
 ];
 
 export default class UnicornEditor extends Component {
 
   constructor(props) {
     super(props);
-    const mentionPluginInstance = mentionPlugin(this);
-    plugins.push(mentionPluginInstance);
+    // const mentionPluginInstance = mentionPlugin(this);
+    // plugins.push(mentionPluginInstance);
 
     this.state = {
       editorState: createEmpty(plugins),

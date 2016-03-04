@@ -9,6 +9,5 @@ import findWithRegex from './findWithRegex';
 const HASHTAG_REGEX = /\#[\w\u0590-\u05ff]+/g;
 
 export default (contentBlock: Object, callback: Function) => {
-  console.log('hashtag');
   findWithRegex(HASHTAG_REGEX, contentBlock, callback);
 };

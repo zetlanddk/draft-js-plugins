@@ -14,7 +14,6 @@ ReactDOM.render(
     </p>
 
     <UnicornEditor />
-    <SuperheroEditor />
 
   </div>, document.getElementById('react')
 );

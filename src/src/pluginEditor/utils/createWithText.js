@@ -7,7 +7,6 @@ import createCompositeDecorator from './createCompositeDecorator';
 
 export default (text, plugins) => {
   const compositeDecorator = createCompositeDecorator(plugins);
-  // compositeDecorator.push(customDecorator);
   return EditorState.createWithContent(
     ContentState.createFromText(text),
     compositeDecorator,
